@@ -1,0 +1,51 @@
+syntax "netrexx" "\.nrx$"
+
+# Class Structure
+color #ed9 "CLASS +[A-Za-z0-9]+ *((extends|implements) +[A-Za-z0-9., ]+)*"
+color #ed9 "METHOD +[A-Za-z0-9]+"
+color #ed9 "options|package"
+
+# Visibility & Modifiers
+color #caf "\<(public|private|inheritable|shared|indirect)\>"
+color #caf "\<(constant|static|transient|unused)\>"
+color #caf "\<(interface|dependent|adapter|binary|deprecated)\>"
+color #caf "\<(extends|implements|uses|returns)\>"
+
+# Keywords
+color #caf "\<(IF|THEN|ELSE|DO|END|LOOP|FOREVER|TO|BY|UNTIL|FROM|OVER|FOR|WHILE|WITH)\>"
+color #caf "\<(SELECT|WHEN|OTHERWISE)\>"
+color #caf "\<(LEAVE|ITERATE|RETURN|EXIT|NOP)\>"
+
+# Instructions
+color #caf "\<(SAY|SAYN|ASK|ASKNOECHO|PARSE|ADDRESS|CALL|DROP|EXPOSE|INTERPRET)\>"
+color #caf "\<(LINEIN|LINEOUT|PULL|PUSH|QUEUE|SIGNAL|TRACE|OPTIONS|VERB|VERIFY)\>"
+color #caf "\<(NUMERIC)\>"
+
+# Types
+color #ed9 "\<(Rexx|String|Object|Class|Array|boolean|byte|char|double|float|int|long|short|void)\>"
+
+# Special Words
+color #bbf "\<(this|super|null|source|sourceline|version|digits|form|trace|length)\>"
+
+# Operators
+color #e9a "[-+*/=<>!&|%]"
+color #e9a "\*\*"
+color #e9a "\|\|"
+
+# Numbers
+color #fa8 "\<[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)?\>"
+color #fa8 "\<0x[0-9a-fA-F]+\>"
+
+# Strings
+color green "\"(\\.|[^\\\"])*\""
+color green "'(\\.|[^'])*'"
+
+# Comments
+color #678 "/\*\*"
+color #678 "^--"
+color #678 start="/\*\*" end="\*/"
+color #678 start="/\*" end="\*/"
+color #678 start="--" end="$"
+
+# Special
+color #bbf,cyan "TODO:?▒^▒^▒"
