@@ -3,6 +3,6 @@ Better syntax highlighting support for [NetRexx](https://www.netrexx.org/index.n
 for the [GNU nano](https://www.nano-editor.org/) text editor.
 
 To do:
-1. Write organized syntax highlighting support for .nrx and .rex files.
-2. Support multiple popular themes like Catppuccin and Dracula, as well as a plain default. 
+1. Organized syntax highlighting support for .nrx and .rex files.
+2. Support for multiple popular themes like Catppuccin and Dracula, as well as a default. 
 3. Include installation instructions
