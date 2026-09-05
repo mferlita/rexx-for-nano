@@ -1,51 +1,121 @@
 syntax "netrexx" "\.nrx$"
 
-# Class Structure
-color #ed9 "CLASS +[A-Za-z0-9]+ *((extends|implements) +[A-Za-z0-9., ]+)*"
-color #ed9 "METHOD +[A-Za-z0-9]+"
-color #ed9 "options|package"
+# ==============================================================================
+# NetRexx is case-insensitive, but regex syntax highlighting can confuse words
+# important to Rexx. To avoid confusion a certain style is recommended. Keywords
+# and related syntax are capitalized. Variables should use camelCase or 
+# snake_case. Class and method names should use PascalCase and camelCase 
+# respectively. Avoid using using words important to Rexx, even when lowercased,
+# when using GNU/nano for editting NetRexx programs.
+# ==============================================================================
 
-# Visibility & Modifiers
-color #caf "\<(public|private|inheritable|shared|indirect)\>"
-color #caf "\<(constant|static|transient|unused)\>"
-color #caf "\<(interface|dependent|adapter|binary|deprecated)\>"
-color #caf "\<(extends|implements|uses|returns)\>"
+# To select a theme, comment out the current theme and uncomment the desired
+# one.
+
+# ==============================================================================
+# Default : Basic Colors
+# ==============================================================================
+# Classes/types/annotations
+color blue CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
+color blue "boolean|byte|char|double|float|int|long|short|Rexx|String|void"
+color blue "@[A-Za-z]+"
+
+# Methods and Functions
+color lightblue "METHOD +[A-Za-z0-9]+"
+color lightblue "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*[(]"
 
 # Keywords
-color #caf "\<(IF|THEN|ELSE|DO|END|LOOP|FOREVER|TO|BY|UNTIL|FROM|OVER|FOR|WHILE|WITH)\>"
-color #caf "\<(SELECT|WHEN|OTHERWISE)\>"
-color #caf "\<(LEAVE|ITERATE|RETURN|EXIT|NOP)\>"
+color magenta "\<(OPTIONS|PACKAGE)\>"
+color magenta "\<(CASE|CATCH|CONSTANT|DEFAULT|DO|ELSE|END|EXTENDS|FINALLY|FOR)\>"
+color magenta "\<(FOREVER|IF|LOOP|OVER|RETURN|SELECT|SWITCH|THEN|THIS|THROW)\>"
+color magenta "\<(TRANSIENT|TRY|WHEN|WHILE|BREAK|CONTINUE|EXIT|ITERATE|LEAVE)\>"
+color magenta "\<(TO|BY|UNTIL|OTHERWISE)\>"
+color magenta "\<(PROPERTIES|PARSE|SAY|SIGNAL|TRACE|ADDRESS|CALL|INTERPRET)\>"
+color magenta "\<(NUMERIC|NOP|PUSH|QUEUE|DROP|ASK|PROCEDURE|EXPOSE|HIDE)\>"
+color magenta "\<(ABSTRACT|ADAPTER|BINARY|CLASS|EXTENDS|FINAL)\>"
+color magenta "\<(IMPLEMENTS|IMPORT|INSTANCEOF|DEPENDENT|DEPRECATED)\>"
+color magenta "\<(DIGITS|FINAL|INTERFACE|NATIVE|PRIVATE|PROTECTED)\>"
+color magenta "\<(PUBLIC|STATIC|INPACKAGE|SHARED|MINOR|PARENT|UNUSED)\>"
+color magenta "\<(BINARY|NOBINARY|DECIMAL|NODECIMAL)\>"
+color magenta "\<(ENGINEERING|FORM|SCIENTIFIC|STRICTFP|SUPER|SYNCHRONIZED)\>"
+color magenta "\<(THROWS|VOLATILE)\>"
+color magenta "\<(FUZZ)\>"
 
-# Instructions
-color #caf "\<(SAY|SAYN|ASK|ASKNOECHO|PARSE|ADDRESS|CALL|DROP|EXPOSE|INTERPRET)\>"
-color #caf "\<(LINEIN|LINEOUT|PULL|PUSH|QUEUE|SIGNAL|TRACE|OPTIONS|VERB|VERIFY)\>"
-color #caf "\<(NUMERIC)\>"
-
-# Types
-color #ed9 "\<(Rexx|String|Object|Class|Array|boolean|byte|char|double|float|int|long|short|void)\>"
-
-# Special Words
-color #bbf "\<(this|super|null|source|sourceline|version|digits|form|trace|length)\>"
+# Constants and Numbers
+color lightred "\<(true|false|null)\>"
+color lightred "\<([0-9._]+|0x[A-Fa-f0-9_]+|0b[0-1_]+)[FL]?\>"
 
 # Operators
-color #e9a "[-+*/=<>!&|%]"
-color #e9a "\*\*"
-color #e9a "\|\|"
-
-# Numbers
-color #fa8 "\<[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)?\>"
-color #fa8 "\<0x[0-9a-fA-F]+\>"
+color cyan "[-+=<>?:!~%&|]"
 
 # Strings
-color green "\"(\\.|[^\\\"])*\""
-color green "'(\\.|[^'])*'"
+color green ""(\\.|[^"])*"|'(\\.|[^'])*'"
+
+# Escape sequences
+color lightmagenta "\\([btnfr]|'|\"|\\)"
+color lightmagenta "\\u[A-Fa-f0-9]{4}"
 
 # Comments
-color #678 "/\*\*"
-color #678 "^--"
-color #678 start="/\*\*" end="\*/"
-color #678 start="/\*" end="\*/"
-color #678 start="--" end="$"
+color lightblack start="/\*" end="\*/"
+color lightblack "^--"
+color lightblack start="--" end="$"
+color lightblack "/\*\*"
+color lightblack start="/\*\*" end="\*/"
+color lightblack "(^|[[:space:]])//.*"
 
-# Special
-color #bbf,cyan "TODO:?▒^▒^▒"
+# TODO
+color white,cyan "TODO:?"
+
+# ==============================================================================
+#  Catppuccin Dark Flavors : Requires 256-color
+# ==============================================================================
+# Classes/types/annotations
+#color yellow "CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
+#color yellow "boolean|byte|char|double|float|int|long|short|Rexx|String|void"
+#color yellow "@[A-Za-z]+"
+
+# Methods/Functions
+#color blue "METHOD +[A-Za-z0-9]+"
+#color blue "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*[(]"
+
+# Keywords
+#color mauve "\<(OPTIONS|PACKAGE\>"
+#color mauve "\<(CASE|CATCH|CONSTANT|DEFAULT|DO|ELSE|END|EXTENDS|FINALLY|FOR\>"
+#color mauve "\<(FOREVER|IF|LOOP|OVER|RETURN|SELECT|SWITCH|THEN|THIS|THROW\>"
+#color mauve "\<(TRANSIENT|TRY|WHEN|WHILE|BREAK|CONTINUE|EXIT|ITERATE|LEAVE\>"
+#color mauve "\<(TO|BY|UNTIL|OTHERWISE\>"
+#color mauve "\<(PROPERTIES|PARSE|SAY|SIGNAL|TRACE|ADDRESS|CALL|INTERPRET\>"
+#color mauve "\<(NUMERIC|NOP|PUSH|QUEUE|DROP|ASK|PROCEDURE|EXPOSE|HIDE\>"
+#color mauve "\<(ABSTRACT|ADAPTER|BINARY|CLASS|EXTENDS|FINAL)\>"
+#color mauve "\<(IMPLEMENTS|IMPORT|INSTANCEOF|DEPENDENT|DEPRECATED)\>"
+#color mauve "\<(DIGITS|FINAL|INTERFACE|NATIVE|PRIVATE|PROTECTED)\>"
+#color mauve "\<(PUBLIC|STATIC|INPACKAGE|SHARED|MINOR|PARENT|UNUSED)\>"
+#color mauve "\<(BINARY|NOBINARY|DECIMAL|NODECIMAL)\>"
+#color mauve "\<(ENGINEERING|FORM|SCIENTIFIC|STRICTFP|SUPER|SYNCHRONIZED)\>"
+#color mauve "\<(THROWS|VOLATILE)\>"
+#color mauve "\<(FUZZ)\>"
+
+# Constants and Numbers
+#color peach "\<(true|false|null)\>"
+#color peach "\<([0-9._]+|0x[A-Fa-f0-9_]+|0b[0-1_]+)[FL]?\>"
+
+# Operators
+#color cyan "[-+=<>?:!~%&|]"
+
+# Strings
+#color green ""(\\.|[^"])*"|'(\\.|[^'])*'"
+
+# Escape sequences
+#color pink "\\([btnfr]|'|\"|\\)"
+#color pink "\\u[A-Fa-f0-9]{4}"
+
+# Comments
+#color slate start="/\*" end="\*/"
+#color slate "^--"
+#color slate start="--" end="$"
+#color slate "/\*\*"
+#color slate start="/\*\*" end="\*/"
+#color slate "(^|[[:space:]])//.*"
+
+# TODO
+#color pink,slate "TODO:?"
