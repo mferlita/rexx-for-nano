@@ -17,7 +17,7 @@ syntax "netrexx" "\.nrx$"
 # ==============================================================================
 # Classes/types/annotations
 color blue CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
-color blue "boolean|byte|char|double|float|int|long|short|Rexx|String|void"
+color blue "\<(boolean|byte|char|double|float|int|long|short|Rexx|String|void)\>"
 color blue "@[A-Za-z]+"
 
 # Methods and Functions
@@ -71,7 +71,7 @@ color white,cyan "TODO:?"
 # ==============================================================================
 # Classes/types/annotations
 #color yellow "CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
-#color yellow "boolean|byte|char|double|float|int|long|short|Rexx|String|void"
+#color yellow "\<(boolean|byte|char|double|float|int|long|short|Rexx|String|void)\>"
 #color yellow "@[A-Za-z]+"
 
 # Methods/Functions
@@ -80,12 +80,12 @@ color white,cyan "TODO:?"
 
 # Keywords
 #color mauve "\<(OPTIONS|PACKAGE\>"
-#color mauve "\<(CASE|CATCH|CONSTANT|DEFAULT|DO|ELSE|END|EXTENDS|FINALLY|FOR\>"
-#color mauve "\<(FOREVER|IF|LOOP|OVER|RETURN|SELECT|SWITCH|THEN|THIS|THROW\>"
-#color mauve "\<(TRANSIENT|TRY|WHEN|WHILE|BREAK|CONTINUE|EXIT|ITERATE|LEAVE\>"
-#color mauve "\<(TO|BY|UNTIL|OTHERWISE\>"
-#color mauve "\<(PROPERTIES|PARSE|SAY|SIGNAL|TRACE|ADDRESS|CALL|INTERPRET\>"
-#color mauve "\<(NUMERIC|NOP|PUSH|QUEUE|DROP|ASK|PROCEDURE|EXPOSE|HIDE\>"
+#color mauve "\<(CASE|CATCH|CONSTANT|DEFAULT|DO|ELSE|END|EXTENDS|FINALLY|FOR)\>"
+#color mauve "\<(FOREVER|IF|LOOP|OVER|RETURN|SELECT|SWITCH|THEN|THIS|THROW)\>"
+#color mauve "\<(TRANSIENT|TRY|WHEN|WHILE|BREAK|CONTINUE|EXIT|ITERATE|LEAVE)\>"
+#color mauve "\<(TO|BY|UNTIL|OTHERWISE)\>"
+#color mauve "\<(PROPERTIES|PARSE|SAY|SIGNAL|TRACE|ADDRESS|CALL|INTERPRET)\>"
+#color mauve "\<(NUMERIC|NOP|PUSH|QUEUE|DROP|ASK|PROCEDURE|EXPOSE|HIDE)\>"
 #color mauve "\<(ABSTRACT|ADAPTER|BINARY|CLASS|EXTENDS|FINAL)\>"
 #color mauve "\<(IMPLEMENTS|IMPORT|INSTANCEOF|DEPENDENT|DEPRECATED)\>"
 #color mauve "\<(DIGITS|FINAL|INTERFACE|NATIVE|PRIVATE|PROTECTED)\>"
