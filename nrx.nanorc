@@ -1,14 +1,5 @@
 syntax "netrexx" "\.nrx$"
 
-# ==============================================================================
-# NetRexx is case-insensitive, but regex syntax highlighting can confuse words
-# important to Rexx. To avoid confusion a certain style is recommended. Keywords
-# and related syntax are capitalized. Variables should use camelCase or 
-# snake_case. Class and method names should use PascalCase and camelCase 
-# respectively. Avoid using using words important to Rexx, even when lowercased,
-# when using GNU/nano for editting NetRexx programs.
-# ==============================================================================
-
 # To select a theme, comment out the current theme and uncomment the desired
 # one.
 
