@@ -1,3 +1,7 @@
+## Syntax highlighting for NetRexx
+
+## Original Author: Matt Ferlita
+
 syntax "netrexx" "\.nrx$"
 
 # To select a theme, comment out the current theme and uncomment the desired
