@@ -1,17 +1,16 @@
 ## Syntax highlighting for NetRexx
 
-## Original Author: Matt Ferlita
+## To select a theme, comment out the current theme and uncomment the desired
+## one.
 
 syntax "netrexx" "\.nrx$"
-
-# To select a theme, comment out the current theme and uncomment the desired
-# one.
 
 # ==============================================================================
 # Default : Basic Colors
 # ==============================================================================
+
 # Classes/types/annotations
-color blue "CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
+color blue "CLASS +[A-Za-z0-9]+"
 color blue "\<(boolean|byte|char|double|float|int|long|short|Rexx|String|void)\>"
 color blue "@[A-Za-z]+"
 
@@ -27,7 +26,7 @@ color magenta "\<(TRANSIENT|TRY|WHEN|WHILE|BREAK|CONTINUE|EXIT|ITERATE|LEAVE)\>"
 color magenta "\<(TO|BY|UNTIL|OTHERWISE)\>"
 color magenta "\<(PROPERTIES|PARSE|SAY|SIGNAL|TRACE|ADDRESS|CALL|INTERPRET)\>"
 color magenta "\<(NUMERIC|NOP|PUSH|QUEUE|DROP|ASK|PROCEDURE|EXPOSE|HIDE)\>"
-color magenta "\<(ABSTRACT|ADAPTER|BINARY|CLASS|EXTENDS|FINAL)\>"
+color magenta "\<(ABSTRACT|ADAPTER|BINARY|CLASS|METHOD|EXTENDS|FINAL)\>"
 color magenta "\<(IMPLEMENTS|IMPORT|INSTANCEOF|DEPENDENT|DEPRECATED)\>"
 color magenta "\<(DIGITS|FINAL|INTERFACE|NATIVE|PRIVATE|PROTECTED)\>"
 color magenta "\<(PUBLIC|STATIC|INPACKAGE|SHARED|MINOR|PARENT|UNUSED)\>"
@@ -64,8 +63,9 @@ color white,cyan "TODO:?"
 # ==============================================================================
 #  Catppuccin Dark Flavors : Requires 256-color
 # ==============================================================================
+
 # Classes/types/annotations
-#color yellow "CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
+#color yellow "CLASS +[A-Za-z0-9]+"
 #color yellow "\<(boolean|byte|char|double|float|int|long|short|Rexx|String|void)\>"
 #color yellow "@[A-Za-z]+"
 
@@ -81,7 +81,7 @@ color white,cyan "TODO:?"
 #color mauve "\<(TO|BY|UNTIL|OTHERWISE)\>"
 #color mauve "\<(PROPERTIES|PARSE|SAY|SIGNAL|TRACE|ADDRESS|CALL|INTERPRET)\>"
 #color mauve "\<(NUMERIC|NOP|PUSH|QUEUE|DROP|ASK|PROCEDURE|EXPOSE|HIDE)\>"
-#color mauve "\<(ABSTRACT|ADAPTER|BINARY|CLASS|EXTENDS|FINAL)\>"
+#color mauve "\<(ABSTRACT|ADAPTER|BINARY|CLASS|METHOD|EXTENDS|FINAL)\>"
 #color mauve "\<(IMPLEMENTS|IMPORT|INSTANCEOF|DEPENDENT|DEPRECATED)\>"
 #color mauve "\<(DIGITS|FINAL|INTERFACE|NATIVE|PRIVATE|PROTECTED)\>"
 #color mauve "\<(PUBLIC|STATIC|INPACKAGE|SHARED|MINOR|PARENT|UNUSED)\>"
