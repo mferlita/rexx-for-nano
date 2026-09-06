@@ -7,7 +7,7 @@ syntax "netrexx" "\.nrx$"
 # Default : Basic Colors
 # ==============================================================================
 # Classes/types/annotations
-color blue CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
+color blue "CLASS +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
 color blue "\<(boolean|byte|char|double|float|int|long|short|Rexx|String|void)\>"
 color blue "@[A-Za-z]+"
 
