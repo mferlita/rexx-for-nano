@@ -16,6 +16,9 @@ icolor blue "\<exception +[A-Za-z0-9_$]+"
 icolor blue "\<method +[A-Za-z0-9_$]+"
 icolor blue "\<properties\>"
 
+# Function/Method Calls
+icolor brightblue "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*\("
+
 # Inheritance
 icolor brightblue "\<(extends|implements)\>"
 
@@ -63,11 +66,8 @@ color red "`[^`]*`"
 
 # Comments
 color cyan "^--.*"
-color cyan start="/*" end="*/"
 color cyan start="--" end="$"
-
-# Function/Method Calls
-icolor brightblue "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*\("
+color cyan start="/\*" end="\*/"
 
 # TODO
 icolor brightwhite,cyan "TODO:?.*"
